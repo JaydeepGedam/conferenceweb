@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>Conference Webpage</title>
+  <style>
+    h9{
+        color: #aeade1;
+    }
+    .roboto {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        }
+        .gradient {
+            background: linear-gradient(to bottom right, #2caeea, #25459e);
+        }
+        .gradientColor {
+            color: #21759c;
+        }
+  </style>
+</head>
+<body class="roboto w-full h-screen text-white relative">
+    <div class="fixed w-full py-2 px-5 gradient flex justify-between items-center">
+        <div class="">
+            <h1 class="font-black text-[20px] tracking-wider">Medy</h1>
+        </div>
+        <div class="">
+            <ul class="sm:bg-none font-bold hidden navlinks absolute flex flex-col gap-3 gradient top-full w-full left-0 px-5 py-2 sm:flex sm:flex-row sm:relative sm:gap-10 transition duration-800">
+                <a class="cursor-pointer" href="index.html"><li>Home</li></a>
+                <a class="cursor-pointer" href="index.html#fee"><li>Fees</li></a>
+                <a class="cursor-pointer" href="index.html#contact"><li>Contact</li></a>
+                <a class="cursor-pointer" href="about.html"><li>About</li></a>
+                <a class="text-[#FFFF00] cursor-pointer" href="schedule.html"><li>Schedule</li></a>
+            </ul>
+        </div>
+        <div class="flex items-center justify-between">
+            <button class="bg-gradient-to-br from-blue-400 to-indigo-700 py-1.5 px-6 rounded-full font-bold mr-5 sm:mr-10" onclick="window.open('https://forms.gle/KTRKpJRLEPdQFF7B8', '_blank')">Register</button>
+            <ion-icon onclick="toggleNav(this)" class='text-3xl sm:hidden' name="menu"></ion-icon>
+        </div>
+    </div>
+    <div class="pt-[80px] pb-[15px] min-[900px]:pt-[100px] min-[900px]:pb-[25px] px-10 w-[100%] flex flex-col gap-10 sm:flex sm:flex-row sm:gap-5 text-black">
+        <div class="flex flex-col items-center w-[100%] min-[900px]:w-[50%] min-[900px]:pl-10">
+            <h1 class="font-bold text-xl">Day 1 - 01 July 2024</h1>
+            <div class="w-[70%] h-[2px] bg-[#0284A8] my-2"></div>
+            <div class="flex flex-col gap-5">
+                <div class="flex flex-col gap-3 min-[900px]:gap-2">
+                    <h1 class="flex flex-col min-[900px]:flex min-[900px]:flex-row items-center min-[900px]:gap-10">08.00 AM to 09.30 AM <span class="text-lg font-bold gradientColor">Registration & Breakfast</span></h1>
+                    <h1 class="flex flex-col min-[900px]:flex min-[900px]:flex-row items-center min-[900px]:gap-10">09.30 AM to 11.00 AM <span class="text-lg font-bold gradientColor">Inauguration & Key Note Address</span></h1>
+                </div>
+    
+                <div class="flex flex-col gap-3 min-[900px]:gap-2">
+                    <h1 class="font-bold mb-2 text-center">Technical Session - I</h1>
+                    <h1 class="flex flex-col min-[900px]:flex min-[900px]:flex-row items-center min-[900px]:gap-10">11.00 AM to 11.30 AM <span class="text-lg font-bold gradientColor">Plenary Talk - I</span></h1>
+                    <h1 class="flex flex-col min-[900px]:flex min-[900px]:flex-row items-center min-[900px]:gap-10">11.30 AM to 12.00 PM <span class="text-lg font-bold gradientColor">Plenary Talk - II</span></h1>
+                    <h1 class="flex flex-col min-[900px]:flex min-[900px]:flex-row items-center min-[900px]:gap-10">12.00 PM to 12.30 PM <span class="text-lg font-bold gradientColor">Plenary Talk - III</span></h1>
+                    <h1 class="flex flex-col min-[900px]:flex min-[900px]:flex-row items-center min-[900px]:gap-10">12.30 PM to 01.30 PM <span class="text-lg font-bold gradientColor">Lunch</span></h1>
+                </div>
+    
+                <div class="flex flex-col gap-3 min-[900px]:gap-2">
+                    <h1 class="font-bold mb-2 text-center">Technical Session - II</h1>
+                    <h1 class="flex flex-col min-[900px]:flex min-[900px]:flex-row items-center min-[900px]:gap-10">02.00 PM to 02.30 PM <span class="text-lg font-bold gradientColor">Plenary Talk - IV</span></h1>
+                    <h1 class="flex flex-col min-[900px]:flex min-[900px]:flex-row items-center min-[900px]:gap-10">02.30 PM to 03.00 PM <span class="text-lg font-bold gradientColor">Plenary Talk - V</span></h1>
+                    <h1 class="flex flex-col min-[900px]:flex min-[900px]:flex-row items-center min-[900px]:gap-10">03.00 PM to 03.30 PM <span class="text-lg font-bold gradientColor">Tea Break</span></h1>
+                    <h1 class="flex flex-col min-[900px]:flex min-[900px]:flex-row items-center min-[900px]:gap-10">03.30 PM to 05.30 PM <span class="text-lg font-bold gradientColor">Oral Presentations</span></h1>
+                    <h1 class="flex flex-col min-[900px]:flex min-[900px]:flex-row items-center min-[900px]:gap-10">06.00 PM to 07.30 PM <span class="text-lg font-bold gradientColor">Cultural Program</span></h1>
+                    <h1 class="flex flex-col min-[900px]:flex min-[900px]:flex-row items-center min-[900px]:gap-10">07.30 PM to 09.00 PM <span class="text-lg font-bold gradientColor">Dinner</span></h1>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col items-center w-[100%] min-[900px]:w-[50%]">
+            <h1 class="font-bold text-xl">Day 2 - 02 July 2024</h1>
+            <div class="w-[70%] h-[2px] bg-[#0284A8] my-2"></div>
+            <div class="flex flex-col gap-5">
+                <div class="flex flex-col gap-3 min-[900px]:gap-2">
+                    <h1 class="flex flex-col min-[900px]:flex min-[900px]:flex-row items-center min-[900px]:gap-10">09.30 AM to 10.15 AM <span class="text-lg font-bold gradientColor">Key Note Address</span></h1>
+                </div>
+    
+                <div class="flex flex-col gap-3 min-[900px]:gap-2">
+                    <h1 class="font-bold mb-2 text-center">Technical Session - I</h1>
+                    <h1 class="flex flex-col min-[900px]:flex min-[900px]:flex-row items-center min-[900px]:gap-10">10.45 AM to 11.15 PM <span class="text-lg font-bold gradientColor">Plenary Talk - VII</span></h1>
+                    <h1 class="flex flex-col min-[900px]:flex min-[900px]:flex-row items-center min-[900px]:gap-10">11.15 PM to 01.00 PM <span class="text-lg font-bold gradientColor">Oral/Poster Presentations</span></h1>
+                    <h1 class="flex flex-col min-[900px]:flex min-[900px]:flex-row items-center min-[900px]:gap-10">01.00 PM to 02.00 PM <span class="text-lg font-bold gradientColor">Lunch</span></h1>
+                    <h1 class="flex flex-col min-[900px]:flex min-[900px]:flex-row items-center min-[900px]:gap-10">02.00 PM to 03.30 PM <span class="text-lg font-bold gradientColor">Valedictory Function</span></h1>
+                </div>
+            </div>
+            <div class="mt-5">
+                <!-- <img src="imgs/ts.avif" alt=""> -->
+                <!-- <img src="imgs/image.png" alt=""> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-0 w-full h-fit gradient text-center py-2 px-2">
+        <h1 class="text-[2.2vmax] sm:text-[2vmax] min-[900px]:text-[1.6vmax] lg:text-[1.2vmax] xl:text-[1.1vmax]">Copyright © 2024 Journal Press India. All Rights Reserved.</h1>
+    </div>
+    <script>
+        function toggleNav(e){
+            let nav = document.querySelector('.navlinks');
+            e.name = e.name === 'menu' ? 'close' : 'menu';
+            nav.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

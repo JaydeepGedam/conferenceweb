@@ -1,0 +1,316 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>Conference Webpage</title>
+  <style>
+    h9{
+        color: #f7f787;
+    }
+    .roboto {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        }
+        .gradient {
+            background: linear-gradient(to bottom right, #2caeea, #25459e);
+        }
+        .gradientColor {
+            color: #21759c;
+        }
+  </style>
+</head>
+<body class="roboto w-full h-screen text-white relative">
+    <div class="fixed w-full py-2 px-5 gradient flex justify-between items-center">
+        <div class="">
+            <h1 class="font-black text-[20px] tracking-wider">Medy</h1>
+        </div>
+        <div class="">
+            <ul class="gradient sm:bg-none font-bold hidden navlinks absolute flex flex-col gap-3 top-full w-full left-0 px-5 py-2 sm:flex sm:flex-row sm:relative sm:gap-10 transition duration-800">
+                <a class="text-[#FFFF00] cursor-pointer" href="index.html"><li>Home</li></a>
+                <a class="cursor-pointer" href="#fee"><li>Fees</li></a>
+                <a class="cursor-pointer" href="#contact"><li>Contact</li></a>
+                <a class="cursor-pointer" href="about.html"><li>About</li></a>
+                <a class="cursor-pointer" href="schedule.html"><li>Schedule</li></a>
+            </ul>
+        </div>
+        <div class="flex items-center justify-between">
+            <button class="bg-gradient-to-br from-blue-400 to-indigo-700 py-1.5 px-6 rounded-full font-bold mr-5 sm:mr-10" onclick="window.open('https://forms.gle/KTRKpJRLEPdQFF7B8', '_blank')">Register</button>
+            <ion-icon onclick="toggleNav(this)" class='text-3xl sm:hidden' name="menu"></ion-icon>
+        </div>
+    </div>
+    <!-- less than md block -->
+    <div class="px-3 md:hidden flex flex-col justify-center pt-[70px] pb-[20px] md:flex-row h-fit bg-[#] text-center text-black md:pt-[80px] md:pb-[70px] md:justify-evenly md:items-center">
+        <!-- <img src="imgs/hero.png" alt="hero"> -->
+        <!-- <div class="flex flex-col items-center justify-center gap-5 w-[20%] h-fit gradient text-white p-10"> -->
+        <div class="w-[100%] md:w-[50%]">
+            <h1 class="text-[2.7vmax] font-bold gradientColor">GOVERNMENT VIDARBHA INSTITUTE OF SCIENCE AND
+                HUMANITIES, AMRAVATI</h1>
+            <h1 class="text-[2vmax]">(An Autonomous Institute of the Govt. of Maharashtra)
+                <br>Reaccredited by NAAC with 'A' grade</h1>
+            <h1 class="mt-8 text-[3vmax] text-zinc-800 font-bold">INTERNATIONAL CONFERENCE
+                <br><span class="text-[18px] font-semibold">On</span></h1>
+            <h1 class="mt-6 text-[3.5vmax] font-bold gradientColor">MATERIAL PHYSICS AND ELECTRONICS FOR
+                <br>SUSTAINABLE DEVELOPMENT</h1>
+            <h1 class="mt-10 text-[18px] font-semibold">On<br><span class="text-[3vmax] font-bold text-zinc-800">July 01-02, 2024</span></h1>
+            <h1 class="mt-8 text-[18px] font-semibold">Organized By :</h1>
+            <h1 class="text-[2.5vmax] mt-2">The Department of Physics & Electronics, Government Vidarbha
+                <br>Institute of Science & Humanities, Amravati. (M.S.), India 444 604</h1>
+        </div>
+        <div class="sm:flex sm:gap-3">
+            <div class="mt-10 px-3 py-4 w-[100%] sm:w-[50%] sm:h-[100%] flex flex-col items-center justify-center gap-5 md:w-[20%] h-fit gradient text-white">
+                <h1 class="font-bold text-[16px]">Collaborative Partners</h1>
+                <div class="flex flex-wrap justify-center items-center gap-6">
+                    <img class="w-[14vmax]" src="imgs/govtmh.png" alt="govtmh">
+                    <img class="w-[14vmax]" src="imgs/sgbau.png" alt="sgbau">
+                    <img class="w-[14vmax]" src="imgs/serb.png" alt="serb">
+                </div>
+            </div>
+            <!-- <div class="flex flex-col items-center justify-center gap-5 w-[20%] h-fit gradient text-white p-10"> -->
+            <div class="mt-5 px-3 py-4 w-[100%] sm:w-[50%] sm:h-[100%] flex flex-col items-center justify-center gap-5 md:w-[20%] h-fit gradient text-white">
+                <h1 class="font-bold text-[16px]">Media Partners</h1>
+                <div class="flex flex-col items-center gap-5">
+                    <img class="w-[16vmax]" src="imgs/jeslogo.png" alt="jeslogo">
+                </div>
+                <div class="mt-5">
+                    <a class="text-[#FFFF00] font-bold text-lg" href="mailto:icmpe2024@gmail.com">icmpe2024@gmail.com</a>
+                    <h1 class="text-[2.5vmax]">(Send research paper on above email id with Registration fees as mentioned in broucher)</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- greater than md block -->
+    <div class="hidden md:flex flex-col justify-center pt-[60px] sm:flex-row h-fit bg-[#] text-center text-black sm:pt-[80px] sm:pb-[30px] sm:justify-evenly sm:items-center">
+        <!-- <img src="imgs/hero.png" alt="hero"> -->
+        <!-- <div class="flex flex-col items-center justify-center gap-5 w-[20%] h-fit gradient text-white p-10"> -->
+        <div class="sm:w-[20%] md:p-5 w-[100%] flex flex-col items-center justify-center gap-5 h-fit gradient text-white p-10">
+            <h1 class="font-bold md:text-[1.7vmax] lg:text-[1.3vmax] xl:text-[1.2vmax] text-[16px]">Collaborative Partners</h1>
+            <div class="flex flex-col items-center gap-3">
+                <img class="md:w-[10vmax] lg:w-[8vmax] xl:w-[7vmax]" src="imgs/govtmh.png" alt="govtmh">
+                <img class="md:w-[10vmax] lg:w-[8vmax] xl:w-[7vmax]" src="imgs/sgbau.png" alt="sgbau">
+                <img class="md:w-[10vmax] lg:w-[8vmax] xl:w-[7vmax]" src="imgs/serb.png" alt="serb">
+                <img src="" alt="">
+            </div>
+        </div>
+        <div class="w-[100%] sm:w-[50%]">
+            <h1 class="md:text-[2vmax] lg:text-[1.7vmax] xl:text-[1.5vmax] text-[25px] font-bold gradientColor">GOVERNMENT VIDARBHA INSTITUTE OF SCIENCE AND
+                HUMANITIES, AMRAVATI</h1>
+            <h1 class="md:text-[1.5vmax] lg:text-[1.2vmax] xl:text-[1.1vmax]">(An Autonomous Institute of the Govt. of Maharashtra)
+                <br>Reaccredited by NAAC with 'A' grade</h1>
+            <h1 class="md:text-[2.3vmax] lg:text-[1.8vmax] xl:text-[1.55vmax] mt-8 text-[24px] text-zinc-800 font-bold">INTERNATIONAL CONFERENCE
+                <br><span class="text-[18px] font-semibold">On</span></h1>
+            <h1 class="md:text-[2.4vmax] lg:text-[1.9vmax] xl:text-[1.6vmax] mt-6 text-[28px] font-bold gradientColor">MATERIAL PHYSICS AND ELECTRONICS FOR
+                SUSTAINABLE DEVELOPMENT</h1>
+            <h1 class="lg:mt-7 mt-10 text-[18px] font-semibold">On<br><span class="md:text-[2vmax] lg:text-[1.7vmax] xl:text-[1.5vmax] text-[21px] font-bold text-zinc-800">July 01-02, 2024</span></h1>
+            <h1 class="md:mt-8 mt-16 md:text-[1.7vmax] lg:text-[1.5vmax] xl:text-[1.3vmax] text-[18px] font-semibold">Organized By :</h1>
+            <h1 class="md:text-[1.6vmax] lg:text-[1.4vmax] xl:text-[1.2vmax] text-[18px] mt-2">The Department of Physics & Electronics, Government Vidarbha
+                <br>Institute of Science & Humanities, Amravati. (M.S.), India 444 604</h1>
+        </div>
+        <!-- <div class="flex flex-col items-center justify-center gap-5 w-[20%] h-fit gradient text-white p-10"> -->
+        <div class="md:p-5 w-[100%] flex flex-col items-center justify-center gap-5 sm:w-[20%] h-fit gradient text-white p-10">
+            <h1 class="font-bold md:text-[1.7vmax] lg:text-[1.4vmax] xl:text-[1.2vmax] text-[16px]">Media Partners</h1>
+            <div class="flex flex-col items-center gap-5">
+                <img class="w-[150px] lg:w-[9vmax] xl:w-[8vmax]" src="imgs/jeslogo.png" alt="jeslogo">
+            </div>
+            <div class="mt-5">
+                <a class="text-[#FFFF00] font-bold md:text-[1.7vmax] lg:text-[1.6vmax] xl:text-[1.4vmax] text-lg" href="mailto:icmpe2024@gmail.com">icmpe2024@gmail.com</a>
+                <h1 class="md:text-[1.5vmax] lg:text-[1.2vmax] xl:text-[1vmax]">(Send research paper on above email id with Registration fees as mentioned in broucher)</h1>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- block below hero -->
+    <div class="flex flex-col gap-5 w-[100%] px-3 md:px-10 md:flex md:flex-row md:h-fit justify-between md:gap-2 items-center">
+        <!-- <div class="h-[100%] w-[59.7%] gradient px-10 py-5"> -->
+        <div class="w-[100%] h-fit px-8 md:w-[52%] gradient md:px-5 py-5">
+            <h1 class="text-xl font-bold text-[#FFFF00] text-center md:text-[1.8vmax] lg:text-[1.6vmax] xl:text-[1.3vmax]">Conference Topics</h1>
+            <div class="flex flex-col gap-6 min-[500px]:flex min-[500px]:flex-row mt-5 w-[100%] md:px-5 font-semibold text-[16px] md:text-[1.6vmax] lg:text-[1.3vmax] xl:text-[1.05vmax]">
+                <div class="w-[100%] min-[500px]:w-[50%] md:w-[50%]">
+                    <ul class="flex flex-col gap-6 list-disc">
+                        <li>Advance Materials</li>
+                        <li>Carbon Nanostructures and Graphene</li>
+                        <li>Optoelectronic Materials</li>
+                        <li>Spintronics</li>
+                        <li>Environmental and Green Materials</li>
+                        <li>Nano-engineering and its applications</li>
+                        <li>Biosensors and Bio-electronics materials</li>
+                        <li>Meta materials</li>
+                        <li>Dielectrics</li>
+                    </ul>
+                </div>
+                <div class="w-[100%] min-[500px]:w-[50%] md:w-[50%]">
+                    <ul class="flex flex-col gap-6 list-disc">
+                        <li>Biomaterials and Medical Devices</li>
+                        <li>Computational Modelling of Metals and Materials</li>
+                        <li>Nano-technology & Nano Engineering</li>
+                        <li>Gas sensors and Smart Materials</li>
+                        <li>Ceramics, Glasses and Composite Materials</li>
+                        <li>Polymer science</li>
+                        <li>Energy Materials</li>
+                        <li>Organic Electronics and Devices</li>
+                        <li>DFT and Molecular Dynamics
+                            Soft Instrumentation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="h-[100%] w-[39.7%] gradient px-10 py-5 flex flex-col gap-6"> -->
+        <div class="h-fit w-[100%] md:w-[48%] gradient px-8 py-5 flex flex-col gap-6 text-justify h-[150%]">
+            <div class="flex flex-col gap-2">
+                <h1 class="text-xl font-bold text-[#FFFF00] md:text-[1.8vmax] lg:text-[1.6vmax] xl:text-[1.25vmax]">Important Dates</h1>
+                <div class="flex flex-col gap-1 md:text-[1.6vmax] lg:text-[1.3vmax] xl:text-[1.05vmax]">
+                    <h1>Abstract Submission - 01 May 2024</h1>
+                    <h1>Full Length Paper Submission - 15 May 2024 (on or Before)</h1>
+                    <h1>Intimation of Acceptance - 30 May 2024</h1>
+                </div>
+            </div>
+            <div class="flex flex-col gap-2">
+                <h1 class="text-xl font-bold text-[#FFFF00] md:text-[1.8vmax] lg:text-[1.6vmax] xl:text-[1.25vmax]">Submission of Papers</h1>
+                <h1 class="md:text-[1.6vmax] lg:text-[1.3vmax] xl:text-[1.05vmax]">Interested authors are requested to submit full length manuscript of research paper in MSWord
+                    including paper title, name of authors, affiliation and e-mail address of the
+                    corresponding authors. The font should be Times New Roman, size 12, 1.5. spacing
+                    Please mail your paper at e-mail icmpe2024@gmail.com</h1>
+            </div>
+            <div class="flex flex-col gap-2">
+                <h1 class="text-xl font-bold text-[#FFFF00] md:text-[1.8vmax] lg:text-[1.6vmax] xl:text-[1.25vmax]">Paper Publication</h1>
+                <h1 class="md:text-[1.6vmax] lg:text-[1.3vmax] xl:text-[1.05vmax]">The selected and peer reviewed papers will be published in Scopus index
+                    <a class="underline underline-offset-1" href="https://www.scopus.com/sourceid/19700186890#tabs=2" target="_blank">SCOPUS</a> journal, Journal of Electrical
+                    Systems published by Engineering and Scientific Research Groups (ESR Groups) having
+                    ISSN: 1112-5209. Authors are requested to download the paper template from website of
+                    journal (<a class="underline underline-offset-1" href="https://journal.esrgroups.org/jes" target="_blank">LINK</a>). The template ready manuscript should be
+                    submitted to conference email - icmpe2024@gmail.com
+                    The publication fee Rs 500/- will be charged extra.</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- fees block -->
+    <div id="fee" class="px-3 md:px-10 mt-10 w-[100%] flex flex-col gap-5">
+        <h1 class="text-center gradientColor font-bold text-[24px] underline underline-offset-8">Fees Structure</h1>
+        <div class="w-[100%] flex flex-col gap-5 md:flex md:flex-row md:justify-between">
+            <!-- <div class="flex flex-col gap-4 w-[49.7%] p-10 gradient"> -->
+            <div class="w-[100%] flex flex-col gap-4 p-5 md:w-[49.7%] md:p-10 gradient">
+                <h1 class="text-xl font-bold text-[#FFFF00] md:text-[1.8vmax] lg:text-[1.6vmax] xl:text-[1.3vmax]">Fees Details</h1>
+                  <div class="overflow-x-auto text-center font-semibold text-[16.5px] md:text-[1.6vmax] lg:text-[1.3vmax] xl:text-[1.05vmax]">
+                    <table class="table-auto border border-collapse">
+                      <thead>
+                        <tr>
+                          <th class="border px-4 py-2">Category</th>
+                          <th class="border px-4 py-2">Registration Fees</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="border px-4 py-2">Students</td>
+                          <td class="border px-4 py-2">Rs. 1000</td>
+                        </tr>
+                        <tr>
+                          <td class="border px-4 py-2">Academicians</td>
+                          <td class="border px-4 py-2">Rs. 1500</td>
+                        </tr>
+                        <tr>
+                          <td class="border px-4 py-2">Industry delegates</td>
+                          <td class="border px-4 py-2">Rs. 3000</td>
+                        </tr>
+                        <tr>
+                          <td class="border px-4 py-2">Foreign delegates</td>
+                          <td class="border px-4 py-2">USD 75</td>
+                        </tr>
+                        <tr>
+                          <td class="border px-4 py-2">Accompanying person</td>
+                          <td class="border px-4 py-2">Rs. 500 (Indians)
+                            <br>USD 20 (Foreign delegates)</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>                 
+                </div>
+                <!-- <div class="flex flex-col gap-2 w-[49.7%] p-10 gradient"> -->
+                <div class="w-[100%] flex flex-col gap-2 p-5 md:w-[49.7%] md:p-10 gradient">
+                    <div>
+                        <h1 class="font-semibold md:text-[1.6vmax] lg:text-[1.3vmax] xl:text-[1.05vmax]">The registration fees may be paid Online/ Internet Banking to:</h1>
+                        <h1 class="text-xl font-bold mt-4 text-[#FFFF00] md:text-[1.8vmax] lg:text-[1.6vmax] xl:text-[1.3vmax]">Account Holders Name</h1>
+                    </div>
+                    <div class="flex flex-col gap-2 md:text-[1.6vmax] lg:text-[1.3vmax] xl:text-[1.05vmax]">
+                        <h1>Government Vidarbha Institute of Science & Humanities, Amravati</h1>
+                        <h1><span class="font-semibold">A/C NO :</span> 11062260046</h1>
+                        <h1><span class="font-semibold">Bank Name :</span> State Bank of India</h1>
+                        <h1><span class="font-semibold">Branch Name :</span> Camp Amravati</h1>
+                        <h1><span class="font-semibold">IFSC code :</span> SBIN0003866</h1>
+                        <h1><span class="font-semibold">MICR code :</span> 444002107</h1>
+                    </div>
+                    <h1 class="font-semibold mt-3 md:text-[1.6vmax] lg:text-[1.3vmax] xl:text-[1.05vmax]"><span class="text-[#FFFF00]">Note :</span> Registration fees include the conference kit, breakfast, lunch and dinner. Delegates will have to
+                        make their own arrangements for accommodation.</h1> 
+                </div>
+        </div>
+    </div>
+
+    <!-- contact block -->
+    <div id="contact" class="px-3 md:px-10 mt-10 h-fit bg-white gap-4 w-[100%] flex flex-col">
+        <h1 class="text-center gradientColor font-bold text-[24px] underline underline-offset-8">Contacts</h1>
+        <div class="flex flex-col md:flex md:flex-row gap-4 w-[100%]">
+            <iframe id="div1" class="w-[100%] md:w-[60%] lg:w-[75%]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.884247964947!2d77.75676159999999!3d20.9571631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd6a3464a9a39cf%3A0x41ba68e6a59d67ab!2sGovernment%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1714634667447!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div id="div2" class="w-[100%] flex flex-col gap-8 min-[500px]:flex min-[500px]:flex-row sm:gap-10 md:w-[40%] lg:w-[25%] gradient py-5 px-7 md:flex md:flex-col md:gap-8 justify-center">
+                <div class="flex flex-col gap-4">
+                    <h1 class="text-xl font-bold text-[#FFFF00] md:text-[1.8vmax] lg:text-[1.6vmax] xl:text-[1.3vmax]">Contact for Correspondence:</h1>
+                    <div class="flex flex-col gap-1 md:text-[1.6vmax] lg:text-[1.3vmax] xl:text-[1.05vmax]">
+                        <h1 class="font-semibold"><i class="fa-solid fa-user font"></i> &nbsp;Dr. S. P. Yawale (Convener)</h1>
+                        <h1><i class="fa-solid fa-phone"></i> &nbsp;+91 8830317223 & 9423125231</h1>
+                    </div>
+                    <div class="flex flex-col gap-1 md:text-[1.6vmax] lg:text-[1.3vmax] xl:text-[1.05vmax]">
+                        <h1 class="font-semibold"><i class="fa-solid fa-user font"></i> &nbsp;Dr. Deepak Dhote (Co-Convener)</h1>
+                        <h1><i class="fa-solid fa-phone"></i> &nbsp;+91 9422857431</h1>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h1 class="text-xl font-bold text-[#FFFF00] md:text-[1.8vmax] lg:text-[1.6vmax] xl:text-[1.3vmax]">Contact for Accommodation:</h1>
+                    <div class="flex flex-col gap-1 md:text-[1.6vmax] lg:text-[1.3vmax] xl:text-[1.05vmax]">
+                        <h1 class="font-semibold"><i class="fa-solid fa-user font"></i> &nbsp;Dr. S. R. Jigajeni</h1>
+                        <h1><i class="fa-solid fa-phone"></i> &nbsp;+91 8767425913 & 9209629752</h1>
+                    </div>
+                    <div class="flex flex-col gap-1 md:text-[1.6vmax] lg:text-[1.3vmax] xl:text-[1.05vmax]">
+                        <h1 class="font-semibold"><i class="fa-solid fa-user font"></i> &nbsp;Dr. D. R. Bijwe</h1>
+                        <h1><i class="fa-solid fa-phone"></i> &nbsp;+91 9822699149</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="mt-7 w-full h-fit gradient text-center py-2 px-2">
+        <h1 class="text-[2.2vmax] sm:text-[2vmax] md:text-[1.6vmax] lg:text-[1.2vmax] xl:text-[1.1vmax]">Copyright © 2024 Journal Press India. All Rights Reserved.</h1>
+    </div>
+
+    
+    <script>
+        function toggleNav(e){
+            let nav = document.querySelector('.navlinks');
+            e.name = e.name === 'menu' ? 'close' : 'menu';
+            nav.classList.toggle('hidden');
+        }
+        window.addEventListener('load', function() {
+      // Get references to the two divs
+      var div1 = document.getElementById('div1');
+      var div2 = document.getElementById('div2');
+
+      // Get the maximum height of the two divs
+      var maxHeight = Math.max(div1.offsetHeight, div2.offsetHeight);
+
+      // Set the height of both divs to the maximum height
+      div1.style.height = maxHeight + 'px';
+      div2.style.height = maxHeight + 'px';
+    });
+    </script>
+</body>
+</html>
