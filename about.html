@@ -26,6 +26,90 @@
         .gradientColor {
             color: #21759c;
         }
+        .cont {
+            margin: 0;
+            padding: 0;
+            height: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: #f0f0f0; */
+        }
+
+        .carousel {
+            position: relative;
+            width: 80%;
+            height: 50vh; /* 50% of viewport height */
+            overflow: hidden;
+            /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+        }
+
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .carousel-control.prev {
+            left: 10px;
+        }
+
+        .carousel-control.next {
+            right: 10px;
+        }
+        .fixed {
+        z-index: 10; /* Ensure the navbar stays on top */
+    }
+
+    .content {
+        padding-top: 0px; /* Adjust according to the navbar height */
+    }
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .carousel {
+                width: 90%;
+                height: 40vh; /* Adjust height for smaller screens */
+            }
+
+            .carousel-control {
+                padding: 8px;
+            }
+            .cont{
+                height: 50%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .carousel {
+                width: 100%;
+                height: 30vh; /* Further adjust height for very small screens */
+            }
+
+            .carousel-control {
+                padding: 6px;
+            }
+        }
   </style>
 </head>
 <body class="roboto w-full h-screen text-white relative">
@@ -47,7 +131,26 @@
             <ion-icon onclick="toggleNav(this)" class='text-3xl sm:hidden' name="menu"></ion-icon>
         </div>
     </div>
-    <div class="pt-[40px] flex flex-col h-fit bg-white md:pt-[70px] md:pb-[10px] gap-4 md:flex md:flex-row w-[100%] text-black">
+
+    <div class="cont h-fit pt-20">
+        <div class="h-fit carousel flex flex-col items-center justify-center">
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <img src="imgs/img1.jpg" alt="Image 1">
+              </div>
+              <div class="carousel-item">
+                  <img src="imgs/img1.jpg" alt="Image 2">
+              </div>
+              <div class="carousel-item">
+                  <img src="imgs/img1.jpg" alt="Image 3">
+              </div>
+          </div>
+          <button class="carousel-control prev" onclick="prevSlide()">❮</button>
+          <button class="carousel-control next" onclick="nextSlide()">❯</button>
+      </div>
+      </div>
+
+    <div class="flex flex-col h-fit bg-white gap-4 md:flex md:flex-row w-[100%] text-black">
         <div class="w-[100%] flex flex-col md:w-[50%] gap-4">
             <div class="flex bg-[#] flex-col gap-5 py-5 px-5">
                 <!-- <img src="imgs/patron.png" alt=""> -->
@@ -189,6 +292,33 @@
             e.name = e.name === 'menu' ? 'close' : 'menu';
             nav.classList.toggle('hidden');
         }
+
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.carousel-item');
+            if (index >= slides.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = index;
+            }
+            const newTransform = `translateX(-${currentSlide * 100}%)`;
+            document.querySelector('.carousel-inner').style.transform = newTransform;
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(currentSlide);
+        });
     </script>
 </body>
 </html>
